@@ -7,6 +7,15 @@ from consultation_management import ConsultationManagement
 from utils import load_image
 
 
+def center_window(window, width, height):
+    """Centraliza uma janela na tela."""
+    screen_width = window.winfo_screenwidth()
+    screen_height = window.winfo_screenheight()
+    x = (screen_width // 2) - (width // 2)
+    y = (screen_height // 2) - (height // 2)
+    window.geometry(f"{width}x{height}+{x}+{y}")
+
+
 def open_window(window_class):
     window_class()
 
@@ -16,7 +25,11 @@ class VetClinicApp:
         self.root = tk.Tk()
         self.root.title("TLC VET")
         self.root.geometry("670x400")
-        
+        self.root.iconbitmap("images/cat.ico")  # Define o ícone da janela
+
+        # Centralizar a janela principal
+        center_window(self.root, 670, 400)
+
         # Criação dos botões
         buttons_data = [
             ("Cadastrar Animal", "button1.png", lambda: AnimalManagement.register_animal()),
@@ -26,7 +39,7 @@ class VetClinicApp:
             ("Olhar Animais", "button5.png", lambda: AnimalManagement.view_animals()),
             ("Olhar Veterinários", "button6.png", lambda: VeterinarianManagement.view_veterinarians()),
         ]
-        
+
         for i, (text, img, action) in enumerate(buttons_data):
             image = load_image(f"images/{img}", (190, 140))
             btn = tk.Button(
