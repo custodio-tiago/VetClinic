@@ -5,7 +5,8 @@ Sistema de clínica veterinária com Python (Tkinter)
 
 ## Características
 - Demonstração de uso de Python com Tkinter e orientação à objetos nesse contexto  
-- Permite a inserção de médicos veterinários, animais e consultas 
+- Permite a inserção de médicos veterinários, animais e consultas
+  
 ![image](https://github.com/user-attachments/assets/2b16b843-1b7c-4d95-827f-c54544ac7b78)
 - Permite a visualização de médicos veterinários, animais e consultas  
 - Agendamento de consultas é via seleçao de médicos veterinários e animais já cadastrados  
