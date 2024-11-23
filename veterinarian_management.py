@@ -21,7 +21,7 @@ class VeterinarianManagement:
 
         popup = tk.Toplevel()
         popup.title("Cadastrar Veterinário")
-        popup.geometry("400x400")
+        popup.geometry("400x200")
 
         tk.Label(popup, text="Nome do Veterinário:").pack(pady=5)
         entry_name = tk.Entry(popup)

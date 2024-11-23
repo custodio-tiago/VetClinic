@@ -32,7 +32,7 @@ def create_table_window(title, data, file_path, headers):
 
     table = tk.Toplevel()
     table.title(title)
-    table.geometry("400x400")
+    table.geometry("450x400")
 
     tk.Label(table, text=title, font=("Arial", 14)).pack(pady=10)
 

@@ -1,3 +1,4 @@
 13/12/2024,Maria da Silva,Broto,OK
 13/12/2024,José da Silva,Broto,Vacinação
 13/12/2024,Maria,Mamba,Rotina
+12/1/2024,José da Silva,Mamba,asdasd
