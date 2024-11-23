@@ -21,20 +21,32 @@ def load_data(file_path):
         return []
 
 
-def create_table_window(title, data, file_path):
+def create_table_window(title, data, file_path, headers):
     def delete_entry(index):
         data.pop(index)
         with open(file_path, "w") as file:
             for line in data:
                 file.write(line + "\n")
         table.destroy()
-        create_table_window(title, data, file_path)
+        create_table_window(title, data, file_path, headers)
 
     table = tk.Toplevel()
     table.title(title)
+    table.geometry("400x400")
 
+    tk.Label(table, text=title, font=("Arial", 14)).pack(pady=10)
+
+    frame = tk.Frame(table)
+    frame.pack()
+
+    # Add headers
+    for col, header in enumerate(headers):
+        tk.Label(frame, text=header, font=("Arial", 10, "bold")).grid(row=0, column=col, padx=10, pady=5)
+
+    # Add data rows
     for i, entry in enumerate(data):
-        lbl = tk.Label(table, text=entry)
-        lbl.grid(row=i, column=0, sticky="w")
-        btn_delete = tk.Button(table, text="Excluir", command=lambda idx=i: delete_entry(idx))
-        btn_delete.grid(row=i, column=1)
+        cols = entry.split(",")
+        for col, value in enumerate(cols):
+            tk.Label(frame, text=value).grid(row=i + 1, column=col, padx=10, pady=5)
+        btn_delete = tk.Button(frame, text="Excluir", command=lambda idx=i: delete_entry(idx))
+        btn_delete.grid(row=i + 1, column=len(cols), padx=10, pady=5)
