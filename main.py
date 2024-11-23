@@ -32,12 +32,12 @@ class VetClinicApp:
 
         # Criação dos botões
         buttons_data = [
-            ("Cadastrar Animal", "button1.png", lambda: AnimalManagement.register_animal()),
+            ("Cadastrar Animal", "button6.png", lambda: AnimalManagement.register_animal()),
             ("Abrir Consulta", "button2.png", lambda: ConsultationManagement.register_consultation()),
             ("Cadastrar Veterinário", "button3.png", lambda: VeterinarianManagement.register_veterinarian()),
             ("Olhar Consultas", "button4.png", lambda: ConsultationManagement.view_consultations()),
             ("Olhar Animais", "button5.png", lambda: AnimalManagement.view_animals()),
-            ("Olhar Veterinários", "button6.png", lambda: VeterinarianManagement.view_veterinarians()),
+            ("Olhar Veterinários", "button1.png", lambda: VeterinarianManagement.view_veterinarians()),
         ]
 
         for i, (text, img, action) in enumerate(buttons_data):
