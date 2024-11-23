@@ -1,3 +1,2 @@
-None,None,None,None
-None,None,None,None
 13/12/2024,Maria da Silva,Broto,OK
+13/12/2024,José da Silva,Broto,Vacinação

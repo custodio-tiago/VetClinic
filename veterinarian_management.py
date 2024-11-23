@@ -31,8 +31,11 @@ class VeterinarianManagement:
         entry_specialty = tk.Entry(popup)
         entry_specialty.pack()
 
-        tk.Button(popup, text="OK", command=save_and_close).pack(side="left", padx=20, pady=10)
-        tk.Button(popup, text="Cancelar", command=cancel).pack(side="right", padx=20, pady=10)
+        # Posicionamento centralizado dos botões
+        btn_frame = tk.Frame(popup)
+        btn_frame.pack(pady=20)
+        tk.Button(btn_frame, text="OK", command=save_and_close).pack(side="left", padx=10)
+        tk.Button(btn_frame, text="Cancelar", command=cancel).pack(side="right", padx=10)
 
     @staticmethod
     def view_veterinarians():
