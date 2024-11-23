@@ -14,8 +14,8 @@ def open_window(window_class):
 class VetClinicApp:
     def __init__(self):
         self.root = tk.Tk()
-        self.root.title("Sistemaa de Clínica Veterinária")
-        self.root.geometry("400x300")
+        self.root.title("TLC VET")
+        self.root.geometry("670x400")
         
         # Criação dos botões
         buttons_data = [
@@ -28,7 +28,7 @@ class VetClinicApp:
         ]
         
         for i, (text, img, action) in enumerate(buttons_data):
-            image = load_image(f"images/{img}", (50, 50))
+            image = load_image(f"images/{img}", (190, 140))
             btn = tk.Button(
                 self.root,
                 text=text,
